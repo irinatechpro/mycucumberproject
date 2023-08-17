@@ -14,7 +14,10 @@ public class GoogleStepDefs {
     GoogleHomePage googleHomePage = new GoogleHomePage();
     @Given("user is on the google home page")
     public void user_is_on_the_google_home_page() {
-        Driver.getDriver().get("https://www.google.com");
+        Driver.getDriver().get("https://www.google.com/");
+       // Google has a confirmation popup for cookie terms,
+        //we locate and accept it
+         googleHomePage.acceptCookies.click();
     }
     @Given("user search for iPhone")
     public void user_search_for_i_phone() {

@@ -2,6 +2,7 @@ package runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
@@ -13,12 +14,12 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
 
         },
-        features = "./src/test/resources",//path of feature file
+        features = "@target/failedRerun.txt",//path of the failedRerun.txt
         glue = "stepdefinitions", //path of the step definitions
         tags = "@data_tables",//this marks which feature file or scenario to run.
         dryRun = false//dryRun is used to check if there is any MISSING JAVA CODE(STEP DEFINITIONS)
 
 )
-public class Runner {
+public class FailedTestRunner {
 
 }

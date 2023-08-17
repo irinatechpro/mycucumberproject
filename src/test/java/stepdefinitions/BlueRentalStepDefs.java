@@ -36,6 +36,7 @@ public class BlueRentalStepDefs {
     public void verify_the_login_is_successful() {
         WaitUtils.waitFor(2);
         assertTrue(blueRentalHomePage.userId.isDisplayed());
+        assertTrue(false);
 
     }
 }
