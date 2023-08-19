@@ -1,4 +1,4 @@
-@google
+
 Feature: google search feature
 
   Background: navigating_google_homepage
@@ -8,7 +8,7 @@ Feature: google search feature
   Scenario: TC01_iphone_search
     And user search for iPhone
     Then verify the page title contains iPhone
-    And close the application
+   And close the application
 
   @teapot
   Scenario: TC02_porcelain_tea_pot_search

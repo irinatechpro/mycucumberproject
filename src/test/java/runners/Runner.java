@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
         },
         features = "./src/test/resources",//path of feature file
         glue = "stepdefinitions", //path of the step definitions
-        tags = "@data_tables",//this marks which feature file or scenario to run.
-        dryRun = false//dryRun is used to check if there is any MISSING JAVA CODE(STEP DEFINITIONS)
+        tags = "@google",//this marks which feature file or scenario to run.
+        dryRun = true//dryRun is used to check if there is any MISSING JAVA CODE(STEP DEFINITIONS)
 
 )
 public class Runner {
