@@ -9,12 +9,13 @@ import org.junit.runner.RunWith;
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failedRerun.txt"
+                "rerun:target/failedRerun.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome = true,//makes reports more readable in the console
         features = "./src/test/resources/features",//path of feature file
         glue = {"stepdefinitions","hooks"}, //path of the step definitions
-       // tags = "@param_feature",
+        tags = "@teapot",
         dryRun = false//executes to generate missing step definitions
 )
 public class Runner {
