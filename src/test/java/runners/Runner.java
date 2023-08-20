@@ -4,21 +4,18 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-
-        plugin = {
-                        "pretty",//generate the report on console colorfully
+        plugin = {//report plugins
+                "pretty",//generates reports on the console
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt"
-
         },
-        features = "./src/test/resources",//path of feature file
-        glue = "stepdefinitions", //path of the step definitions
-        tags = "@google",//this marks which feature file or scenario to run.
-        dryRun = true//dryRun is used to check if there is any MISSING JAVA CODE(STEP DEFINITIONS)
-
+        monochrome = true,//makes reports more readable in the console
+        features = "./src/test/resources/features",//path of feature file
+        glue = {"stepdefinitions","hooks"}, //path of the step definitions
+        tags = "@param_feature",
+        dryRun = false//executes to generate missing step definitions
 )
 public class Runner {
-
 }

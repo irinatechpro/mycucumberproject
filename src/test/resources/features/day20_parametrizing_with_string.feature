@@ -10,6 +10,7 @@ Feature: search_feature
     And close the application
 
   Scenario: TC02_tesla_search
+    //Then accept Google popup
     When user search for "Tesla"
     Then verify the page title contains "Tesla"
     And close the application
